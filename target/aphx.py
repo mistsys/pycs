@@ -1,7 +1,7 @@
 # -----------------------------------------------------------------------------
 """
 
-Nordic nRF52 for APLX (nrf52832)
+Nordic nRF52 for APHX (nrf52832)
 
 """
 # -----------------------------------------------------------------------------
@@ -23,7 +23,7 @@ import vendor.nordic.i2c as i2c_driver
 # -----------------------------------------------------------------------------
 
 soc_name = 'nRF52832'
-prompt = 'nRF52832_aplx'
+prompt = 'aphx'
 
 # -----------------------------------------------------------------------------
 
@@ -58,25 +58,25 @@ gpio_cfg = (
   #('P0.3', None, None, None, None, None, '',),
   #('P0.4', None, None, None, None, None, '',),
   ('P0.5', None, None, None, None, None, 'UART_CTS',),
-  ('P0.6', None, None, None, None, None, 'UART_RTS',),
-  ('P0.7', None, None, None, None, None, 'UART_RX',),
+  ('P0.6', None, None, None, None, None, 'UART_RX',),
+  ('P0.7', None, None, None, None, None, 'UART_RTS',),
   ('P0.8', None, None, None, None, None, 'UART_TX',),
   #('P0.9', None, None, None, None, None, '',),
   #('P0.10', None, None, None, None, None, '',),
-  ('P0.11', None, None, None, None, None, 'SDA_EXT_RESERVED',),
-  ('P0.12', None, None, None, None, None, 'SCL_EXT_RESERVED',),
+  #('P0.11', None, None, None, None, None, '',),
+  #('P0.12', None, None, None, None, None, '',),
   ('P0.13', None, None, None, None, None, 'BLE_SWITCH',),
   #('P0.14', None, None, None, None, None, '',),
   #('P0.15', None, None, None, None, None, '',),
   #('P0.16', None, None, None, None, None, '',),
   ('P0.17', None, None, None, None, None, 'INT_EXT',),
   ('P0.18', None, None, None, None, None, 'DATA_SWO',),
-  #('P0.19', None, None, None, None, None, '',),
+  ('P0.19', None, None, None, None, None, 'BLE_WAKE',),
   #('P0.20', None, None, None, None, None, '',),
-  #('P0.21', None, None, None, None, None, '',),
+  ('P0.21', None, None, None, None, None, 'BLE_RESET',),
   #('P0.22', None, None, None, None, None, '',),
-  ('P0.23', None, None, None, None, None, 'BLE_RESET',),
-  ('P0.24', None, None, None, None, None, 'BLE_WAKE',),
+  #('P0.23', None, None, None, None, None, '',),
+  #('P0.24', None, None, None, None, None, '',),
   #('P0.25', None, None, None, None, None, '',),
   ('P0.26', None, None, None, None, None, 'SDA_EXT',),
   ('P0.27', None, None, None, None, None, 'SCL_EXT',),
@@ -89,7 +89,7 @@ gpio_cfg = (
 # -----------------------------------------------------------------------------
 
 class target(object):
-  """nRF52832- Nordic nRF52 SOC for APLX"""
+  """nRF52832- Nordic nRF52 SOC for APHX"""
 
   def __init__(self, ui, dbgio):
     self.ui = ui
